@@ -1,10 +1,10 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+WORKDIR /tmp
 
 # 复制所需文件到容器中
-COPY ./requirements.txt /app
-COPY ./VERSION /app
+COPY ./requirements.txt /tmp
+COPY ./VERSION /tmp
 
 RUN pip install --no-cache-dir -r requirements.txt
 COPY ./app /app/app
